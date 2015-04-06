@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class KKo\Cache\Cache | KKo Cache</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-KKo.html">
+						KKo<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-KKo.Cache.html">
+						Cache					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-KKo.Cache.AbstractFile.html">AbstractFile</a></li>
+				<li><a href="class-KKo.Cache.APC.html">APC</a></li>
+				<li class="active"><a href="class-KKo.Cache.Cache.html">Cache</a></li>
+				<li><a href="class-KKo.Cache.File.html">File</a></li>
+				<li><a href="class-KKo.Cache.Files.html">Files</a></li>
+				<li><a href="class-KKo.Cache.MemCache.html">MemCache</a></li>
+				<li><a href="class-KKo.Cache.Mock.html">Mock</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-KKo.Cache.CacheException.html">CacheException</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-KKo.Cache.html" title="Summary of KKo\Cache"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
+			</li>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Cache</h1>
+
+
+	<div class="description">
+	<p>Abstract class Cache</p>
+	</div>
+
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-KKo.Cache.AbstractFile.html">KKo\Cache\AbstractFile</a>, 
+			<a href="class-KKo.Cache.APC.html">KKo\Cache\APC</a>, 
+			<a href="class-KKo.Cache.MemCache.html">KKo\Cache\MemCache</a>, 
+			<a href="class-KKo.Cache.Mock.html">KKo\Cache\Mock</a>
+	</div>
+
+	<div>
+		<h4>Indirect known subclasses</h4>
+			<a href="class-KKo.Cache.File.html">KKo\Cache\File</a>, 
+			<a href="class-KKo.Cache.Files.html">KKo\Cache\Files</a>
+	</div>
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br>
+		
+		<b>Namespace:</b> <a href="namespace-KKo.html">KKo</a>\<a href="namespace-KKo.Cache.html">Cache</a><br>
+		
+
+				<b>Copyright:</b>
+				2012-2014 Knut Kohl<br>
+				<b>License:</b>
+				<a href="MIT">License (MIT) http://opensource.org/licenses/MIT</a><br>
+				<b>Author:</b>
+				Knut Kohl <a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#58;g&#x69;&#116;&#x68;&#x75;&#98;&#x40;&#107;n&#x75;&#116;&#x6b;&#x6f;&#104;&#x6c;&#46;&#100;&#x65;">g&#x69;&#116;&#x68;&#x75;&#98;&#x40;&#107;n&#x75;&#116;&#x6b;&#x6f;&#104;&#x6c;&#46;&#100;&#x65;</a><br>
+				<b>Version:</b>
+				1.2.0<br>
+				<b>Changelog:</b>
+				<ul>
+<li>v1.2.0
+
+<ul>
+<li>Move validation check against timestamps into here</li>
+</ul></li>
+<li>v1.1.0
+
+<ul>
+<li>Add test to find supported caches</li>
+</ul></li>
+</ul><br>
+			<b>Located at</b> <a href="source-class-KKo.Cache.Cache.html#5-466" title="Go to source code">Cache.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="isAvailable" id="_isAvailable">
+
+		<td class="attributes"><code>
+			abstract public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isAvailable">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#26-33" title="Go to source code">isAvailable</a>( )</code>
+
+		<div class="description short">
+			<p>Cache availability</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Cache availability</p>
+
+<p>Returns TRUE by default, reimplement if required</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="write" id="_write">
+
+		<td class="attributes"><code>
+			abstract public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_write">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#35-43" title="Go to source code">write</a>( <span>string <var>$key</var></span>, <span>string <var>$data</var></span>, <span>integer <var>$ttl</var></span> )</code>
+
+		<div class="description short">
+			<p>Write raw data in cache</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Write raw data in cache</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>Unique cache Id</dd>
+					<dt><var>$data</var></dt>
+					<dd></dd>
+					<dt><var>$ttl</var></dt>
+					<dd>Time to live</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fetch" id="_fetch">
+
+		<td class="attributes"><code>
+			abstract public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fetch">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#45-51" title="Go to source code">fetch</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>Retrieve raw data from cache</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Retrieve raw data from cache</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>Unique cache Id</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete" id="_delete">
+
+		<td class="attributes"><code>
+			abstract public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#53-59" title="Go to source code">delete</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>Delete data from cache</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Delete data from cache</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>Unique cache Id</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="flush" id="_flush">
+
+		<td class="attributes"><code>
+			abstract public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_flush">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#61-66" title="Go to source code">flush</a>( )</code>
+
+		<div class="description short">
+			<p>Clear cache</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Clear cache</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="factory" id="_factory">
+
+		<td class="attributes"><code>
+			final public static
+
+			<code><a href="class-KKo.Cache.Cache.html">KKo\Cache\Cache</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_factory">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#72-94" title="Go to source code">factory</a>( <span>array <var>$settings</var> = <span class="php-keyword1">array</span>()</span>, <span>string <var>$classes</var> = <span class="php-keyword1">NULL</span> </span> )</code>
+
+		<div class="description short">
+			<p>Create/find a cache instance</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Create/find a cache instance</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$settings</var></dt>
+					<dd></dd>
+					<dt><var>$classes</var></dt>
+					<dd>Force cache class to create</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-KKo.Cache.Cache.html">KKo\Cache\Cache</a></code>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#96-113" title="Go to source code">__construct</a>( <span>array <var>$settings</var> = <span class="php-keyword1">array</span>() </span> )</code>
+
+		<div class="description short">
+			<p>Class constructor</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Class constructor</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$settings</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="info" id="_info">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_info">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#115-122" title="Go to source code">info</a>( )</code>
+
+		<div class="description short">
+			<p>Some infos about the cache</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Some infos about the cache</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHits" id="_getHits">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHits">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#124-131" title="Go to source code">getHits</a>( )</code>
+
+		<div class="description short">
+			<p>Amount of cache hits absolute, overwrite for concrete class!</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Amount of cache hits absolute, overwrite for concrete class!</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMisses" id="_getMisses">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMisses">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#133-140" title="Go to source code">getMisses</a>( )</code>
+
+		<div class="description short">
+			<p>Amount of cache misses absolute, overwrite for concrete class!</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Amount of cache misses absolute, overwrite for concrete class!</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="save" id="_save">
+
+		<td class="attributes"><code>
+			final public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_save">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#142-191" title="Go to source code">save</a>( <span>string <var>$key</var></span>, <span>mixed <var>&amp; $data</var></span>, <span>integer <var>$ttl</var> = <span class="php-num">0</span> </span> )</code>
+
+		<div class="description short">
+			<p>Get data from cache, if not yet exists, save to cache</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get data from cache, if not yet exists, save to cache</p>
+
+<p>Nested calls of save() will be handled correctly.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>Unique cache Id</dd>
+					<dt><var>$data</var></dt>
+					<dd>$data Data to store / retrieve</dd>
+					<dt><var>$ttl</var></dt>
+					<dd>Time to live, if set to 0, expire never</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><a href="class-KKo.Cache.CacheException.html">KKo\Cache\CacheException</a></code>
+				</div>
+
+				<h4>Code</h4>
+				<div class="list">
+						<p>$cache = Cache::create('...');
+while ($cache->save($key, $data[, $ttl])) {
+    ...
+    $data = ...;
+}
+echo $data;</p><br>
+				</div>
+				<h4>Endcode</h4>
+				<div class="list">
+				</div>
+				<h4>Par</h4>
+				<div class="list">
+						<p>Scenarios:
+- Data not cached yet @b or not more valid
+    - On 1st call: Return TRUE and go 1 times through the loop to build
+        the data
+    - On 2nd call: Store the data to the cache and return FALSE
+- Data cached @b and valid
+    - On 1st call: Retrieve the data from cache and return FALSE</p><br>
+				</div>
+				<h4>Usage</h4>
+				<div class="list">
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="inc" id="_inc">
+
+		<td class="attributes"><code>
+			 public 
+
+			numeric|boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_inc">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#193-207" title="Go to source code">inc</a>( <span>string <var>$key</var></span>, <span>numeric <var>$step</var> = <span class="php-num">1</span> </span> )</code>
+
+		<div class="description short">
+			<p>Increments value of an item by the specified value.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Increments value of an item by the specified value.</p>
+
+<p>If item specified by key was not numeric and cannot be converted to a
+number, it will change its value to value.</p>
+
+<p>inc() does not create an item if it doesn't already exist.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>Unique cache Id</dd>
+					<dt><var>$step</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					numeric|boolean<br>New items value on success or FALSE on failure.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="dec" id="_dec">
+
+		<td class="attributes"><code>
+			 public 
+
+			numeric|boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_dec">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#209-226" title="Go to source code">dec</a>( <span>string <var>$key</var></span>, <span>numeric <var>$step</var> = <span class="php-num">1</span> </span> )</code>
+
+		<div class="description short">
+			<p>Decrements value of the item by value.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Decrements value of the item by value.</p>
+
+<p>If item specified by key was not numeric and cannot be converted to a
+number, it will change its value to value.</p>
+
+<p>dec() does not create an item if it doesn't already exist.</p>
+
+<p>Similarly to inc(), current value of the item is being converted to
+numerical and after that value is substracted.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>Unique cache Id</dd>
+					<dt><var>$step</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					numeric|boolean<br>New items value on success or FALSE on failure.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__set" id="___set">
+
+		<td class="attributes"><code>
+			final public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___set">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#228-248" title="Go to source code">__set</a>( <span>string <var>$key</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Magic method to set cache data</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Magic method to set cache data</p>
+
+<p>Use implicit $ttl == NULL</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+				<h4>Code</h4>
+				<div class="list">
+						<p>$cache = Cache::create('...');
+// Set data
+$cache->Key = '...';
+// Retrieve data
+$data = $cache->Key;</p><br>
+				</div>
+				<h4>Endcode</h4>
+				<div class="list">
+				</div>
+				<h4>Usage</h4>
+				<div class="list">
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="set" id="_set">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#250-274" title="Go to source code">set</a>( <span>string <var>$key</var></span>, <span>mixed <var>$data</var></span>, <span>integer <var>$ttl</var> = <span class="php-keyword1">NULL</span> </span> )</code>
+
+		<div class="description short">
+			<p>Write raw data in cache</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Write raw data in cache</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>Unique cache Id</dd>
+					<dt><var>$data</var></dt>
+					<dd></dd>
+					<dt><var>$ttl</var></dt>
+					<dd><p>Time to live or timestamp
+                                - = 0 - expire never
+                                - > 0 - Time to live
+                                - &lt; 0 - Timestamp of expiration</p></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__get" id="___get">
+
+		<td class="attributes"><code>
+			final public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___get">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#276-295" title="Go to source code">__get</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>Magic method to get cached data</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Magic method to get cached data</p>
+
+<p>Use implicit $expire == NULL</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+				<h4>Code</h4>
+				<div class="list">
+						<p>$cache = Cache::create('...');
+// Set data
+$cache->Key = '...';
+// Retrieve data
+$data = $cache->Key;</p><br>
+				</div>
+				<h4>Endcode</h4>
+				<div class="list">
+				</div>
+				<h4>Usage</h4>
+				<div class="list">
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get" id="_get">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#297-316" title="Go to source code">get</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>Retrieve raw data from cache</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Retrieve raw data from cache</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>Unique cache Id</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__isset" id="___isset">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___isset">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#318-335" title="Go to source code">__isset</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>Magic method to check existence and validity of cached data</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Magic method to check existence and validity of cached data</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+				<h4>Code</h4>
+				<div class="list">
+						<p>$cache = Cache::create('...');
+if (!isset($cache->Key)) {
+    $cache->Key = '...';
+}
+$data = $cache->Key;</p><br>
+				</div>
+				<h4>Endcode</h4>
+				<div class="list">
+				</div>
+				<h4>Usage</h4>
+				<div class="list">
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__unset" id="___unset">
+
+		<td class="attributes"><code>
+			final public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___unset">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#337-345" title="Go to source code">__unset</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>Magic method to unset cached data</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Magic method to unset cached data</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="valid" id="_valid">
+
+		<td class="attributes"><code>
+			 protected 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_valid">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#383-397" title="Go to source code">valid</a>( <span>integer <var>$ts</var></span>, <span>integer <var>$ttl</var></span> )</code>
+
+		<div class="description short">
+			<p>Check data validity according to the timestamps</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Check data validity according to the timestamps</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ts</var></dt>
+					<dd>Timestamp when data was last saved</dd>
+					<dt><var>$ttl</var></dt>
+					<dd>Time to live of data to check against</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><a href="class-KKo.Cache.Cache.html#_set">KKo\Cache\Cache::set()</a></code><br>
+						<code><a href="class-KKo.Cache.Cache.html#_get">KKo\Cache\Cache::get()</a></code><br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="key" id="_key">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_key">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#399-407" title="Go to source code">key</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>Build internal Id from external Id and the cache token</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Build internal Id from external Id and the cache token</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>Unique cache Id</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="serialize" id="_serialize">
+
+		<td class="attributes"><code>
+			 protected 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_serialize">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#409-418" title="Go to source code">serialize</a>( <span>mixed <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Serialize data</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Serialize data</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unserialize" id="_unserialize">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unserialize">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#420-429" title="Go to source code">unserialize</a>( <span>string <var>$data</var></span> )</code>
+
+		<div class="description short">
+			<p>Unserialize data</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Unserialize data</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="modify" id="_modify">
+
+		<td class="attributes"><code>
+			 protected 
+
+			num
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_modify">#</a>
+		<code><a href="source-class-KKo.Cache.Cache.html#442-464" title="Go to source code">modify</a>( <span>string <var>$key</var></span>, <span>integer <var>$step</var></span> )</code>
+
+		<div class="description short">
+			<p>Increments / decrements value of the item by value.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Increments / decrements value of the item by value.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>Unique cache Id</dd>
+					<dt><var>$step</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					num<br>New items value on success or FALSE on failure.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="ts" id="$ts">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-KKo.Cache.Cache.html#351-356" title="Go to source code"><var>$ts</var></a>
+
+			<div class="description short">
+				<p>Master timestamp</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Master timestamp</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$ts" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="settings" id="$settings">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-KKo.Cache.Cache.html#358-367" title="Go to source code"><var>$settings</var></a>
+
+			<div class="description short">
+				<p>Settings</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Settings</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$settings" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>(
+    <span class="php-quote">'Token'</span>       =&gt; <span class="php-quote">''</span>,
+    <span class="php-quote">'Directory'</span>   =&gt; <span class="php-quote">''</span>,
+    <span class="php-quote">'TTL'</span>         =&gt; <span class="php-num">3600</span>
+)</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="Caches" id="$Caches">
+		<td class="attributes"><code>
+			protected static 
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-KKo.Cache.Cache.html#369-381" title="Go to source code"><var>$Caches</var></a>
+
+			<div class="description short">
+				<p>Available caching methods</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Available caching methods</p>
+
+					<h4>Todo</h4>
+					<div class="list">
+							Test 'EAccelerator', 'XCache'<br>
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$Caches" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>(
+    <span class="php-quote">'MemCache'</span>, <span class="php-quote">'APC'</span>,
+    <span class="php-comment">// Only avail. with a writeable directory</span>
+    <span class="php-quote">'File'</span>, <span class="php-quote">'Files'</span>,
+    <span class="php-comment">// Always avail.</span>
+    <span class="php-quote">'Mock'</span>
+)</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="stack" id="$stack">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-KKo.Cache.Cache.html#435-440" title="Go to source code"><var>$stack</var></a>
+
+			<div class="description short">
+				<p>Stack of save() calls</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Stack of save() calls</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$stack" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		KKo Cache API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

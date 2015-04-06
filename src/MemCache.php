@@ -1,30 +1,32 @@
 <?php
 /**
+ *
+ */
+namespace KKo\Cache;
+
+/**
  * Cache class using MemCache server
  *
  * The following settings are supported:
- * - Token    : used to build unique cache Ids (optional)
- * - MemCache : <host>[:<port>] (optional) default: localhost:11211
+ *
+ * - token    : used to build unique cache Ids (optional)
+ * - MemCache : host[:port] (optional) default: localhost:11211
  *
  * If MemCache is not installed, gMemCache is used,
  * a purely implementation of a MemCache client in PHP.
+ * http://www.phpclasses.org/package/4094-PHP-memcache-client-in-pure-PHP.html
  *
  * @author     Knut Kohl <github@knutkohl.de>
  * @copyright  2010-2013 Knut Kohl
  * @license    GNU General Public License http://www.gnu.org/licenses/gpl.txt
  * @version    1.0.0
  */
-namespace Cache;
-
-/**
- *
- */
-class MemCacheOne extends \Cache {
+class MemCache extends Cache {
 
     /**
      * Default server
      */
-    const HOST = '127.0.0.1';
+    const HOST = 'localhost';
 
     /**
      * Default port
@@ -44,7 +46,9 @@ class MemCacheOne extends \Cache {
     public function __construct( $settings=array() ) {
         parent::__construct($settings);
 
-        $host = isset($this->settings['MemCache']) ? $this->settings['MemCache'] : self::HOST;
+        $host = isset($this->settings['MemCache'])
+              ? $this->settings['MemCache']
+              : self::HOST;
 
         if (strstr($host, ':')) {
             list($this->host, $this->port) = explode(':', $host, 2);
@@ -53,13 +57,13 @@ class MemCacheOne extends \Cache {
             $this->port = self::PORT;
         }
 
-        if (extension_loaded('memcache')) {
-            $this->memcache = new \MemCache;
-        } else {
+         if (extension_loaded('memcache')) {
+             $this->memcache = new \MemCache;
+         } else {
             // use gMemCache
             include_once __DIR__ . DIRECTORY_SEPARATOR . 'gMemCache.php';
             $this->memcache = new \gMemCache;
-        }
+         }
     }
 
     /**
@@ -67,41 +71,23 @@ class MemCacheOne extends \Cache {
      * @{
      */
     public function isAvailable() {
-        if (!$this->memcache->connect($this->host, $this->port)) return FALSE;
-
-        $data = $this->memcache->get($this->key(__FILE__));
-        $this->data = is_array($data) ? $data : array();
-        $this->modified = FALSE;
-
-        return TRUE;
+        return $this->memcache->connect($this->host, $this->port);
     }
 
     public function write( $key, $data, $ttl ) {
-        $key = strtolower($key);
-        $this->data[$key] = $data;
-        $this->modified = TRUE;
-        return TRUE;
+      return $this->memcache->set($this->key($key), $data, 0, $ttl ? $this->ts+$ttl : 0);
     }
 
     public function fetch( $key ) {
-        $key = strtolower($key);
-        return array_key_exists($key, $this->data) ? $this->data[$key] : NULL;
+        return $this->memcache->get($this->key($key));
     }
 
     public function delete( $key ) {
-        $key = strtolower($key);
-        if (array_key_exists($key, $this->data)) {
-            unset($this->data[$key]);
-            $this->modified = TRUE;
-            return TRUE;
-        }
-        return FALSE;
+        return $this->memcache->delete($this->key($key));
     }
 
     public function flush() {
-        $this->data = array();
-        $this->modified = TRUE;
-        return TRUE;
+        return $this->memcache->flush();
     }
 
     public function info() {
@@ -113,41 +99,36 @@ class MemCacheOne extends \Cache {
      * Use MemCache own functions
      * @{
      */
-    public function inc( $key, $step=1 ) {
-        return $this->memcache->increment($this->key($key), $step);
-    } // function inc()
+    public function getHits() {
+        $stats = $this->memcache->getStats();
+        return $stats['get_hits'];
+    }
 
-    public function dec( $key, $step=1 ) {
-        return $this->memcache->decrement($this->key($key), $step);
-    } // function dec()
-    /** @} */
+    public function getMisses() {
+        $stats = $this->memcache->getStats();
+        return $stats['get_misses'];
+    }
 
     /**
-     * Class destructor
-     *
-     * Save changes to file if modified
+     * Close connection
      */
-    public function __destruct() {
-        // Save only if data was modified
-        if ($this->modified) {
-            $this->memcache->set($this->key(__FILE__), $this->data);
-        }
+    public function __destruct(){
         $this->memcache->close();
-    } // function __destruct()
+    }
 
     // -------------------------------------------------------------------------
     // PROTECTED
     // -------------------------------------------------------------------------
 
     /**
-     * MemCache instance
+     * MemCache host
      *
      * @var string $host
      */
     protected $host;
 
     /**
-     * MemCache instance
+     * MemCache port
      *
      * @var int $port
      */
@@ -161,17 +142,15 @@ class MemCacheOne extends \Cache {
     protected $memcache;
 
     /**
-     * Track cache mdification to detect need of save at the end
+     * Build internal Id from external Id and the cache token
      *
-     * @var bool $modified
-     */
-    protected $modified;
-
-    /**
-     * Data cache
+     * Don't hash here, Memcache will do this anyway
      *
-     * @var array $data
+     * @param string $key Unique cache Id
+     * @return string
      */
-    protected $data;
+    protected function key( $key ) {
+        return $this->settings['token'].':'.$key;
+    } // function key()
 
 }

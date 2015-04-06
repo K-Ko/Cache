@@ -1,0 +1,24 @@
+{
+    "name":        "KKo/Cache",
+    "description": "Universal caching classes",
+    "license":     "MIT",
+    "keywords":    ["cache","memcache","apc"],
+    "authors": [
+        {
+            "name":  "Knut Kohl",
+            "email": "github@knutkohl.de"
+        }
+    ],
+    "prefer-stable": true,
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "phpunit/php-invoker": "*",
+        "apigen/apigen": "4.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "KKo\\Cache\\": "src"
+        }
+    }
+}

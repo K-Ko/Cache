@@ -1,23 +1,24 @@
 <?php
 /**
+ *
+ */
+namespace KKo\Cache;
+
+/**
  * Class Files
  *
  * Store data for each id in a separate file, recommended for large data sets
  * The data are not in memory, they will read each time they are required.
  *
  * The following settings are supported:
- * - Token     : used to build unique cache files (optional)
- * - Directory : Where to store the file with the cached data (optional)
+ *
+ * - token     : used to build unique cache files (optional)
+ * - directory : Where to store the file with the cached data (optional)
  *
  * @author     Knut Kohl <github@knutkohl.de>
  * @copyright  2010-2013 Knut Kohl
  * @license    GNU General Public License http://www.gnu.org/licenses/gpl.txt
  * @version    1.0.0
- */
-namespace Cache;
-
-/**
- *
  */
 class Files extends AbstractFile {
 
@@ -62,6 +63,7 @@ class Files extends AbstractFile {
      * @return bool
      */
     public function delete( $key ) {
+        unset($this->data[$key]);
         return $this->RemoveFile($this->FileName($key, '.single.cache'));
     } // function delete()
 

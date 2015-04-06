@@ -1,1 +1,4 @@
-tests/
+coverage/
+vendor/
+makedoc.sh
+composer.lock

@@ -1,4 +1,7 @@
 <?php
+
+namespace KKo\Cache;
+
 /**
  * Abstract class Cache
  *
@@ -77,7 +80,7 @@ abstract class Cache {
         $classes = ($classes == '') ? self::$Caches : explode(',', $classes);
 
         foreach ($classes as $class) {
-            $class = 'Cache\\'.$class;
+            $class = 'KKo\Cache\\'.$class;
 
             if (!class_exists($class))
                 throw new CacheException('Missing class: '.$class);
@@ -87,7 +90,7 @@ abstract class Cache {
         }
 
         // If no cache is available, return mockup class
-        return new Cache\Mock;
+        return new Mock;
     } // function factory()
 
     /**
@@ -99,10 +102,12 @@ abstract class Cache {
     public function __construct( $settings=array() ) {
         $this->ts = time();
         $this->stack = array();
-        $this->settings = array_merge($this->settings, $settings);
+        if (is_array($settings)) {
+            $this->settings = array_merge($this->settings, $settings);
+        }
 
-        if ($this->settings['Token'] == '') {
-            $this->settings['Token'] = substr(md5(__FILE__), -7);
+        if ($this->settings['token'] == '') {
+            $this->settings['token'] = substr(md5(__FILE__), -7);
         }
 
     } // function __construct()
@@ -356,8 +361,8 @@ abstract class Cache {
      * @var array $settings
      */
     protected $settings = array(
-        'Token'       => '',
-        'Directory'   => '',
+        'token'       => '',
+        'directory'   => '',
         'TTL'         => 3600
     );
 
@@ -368,7 +373,7 @@ abstract class Cache {
      * @var array $Caches
      */
     protected static $Caches = array(
-        'MemCache', 'APC', 'MemCacheOne',
+        'MemCache', 'APC',
         // Only avail. with a writeable directory
         'File', 'Files',
         // Always avail.
@@ -398,7 +403,7 @@ abstract class Cache {
      * @return string
      */
     protected function key( $key ) {
-        return $this->settings['Token'].'.'.substr(md5(strtolower($key)), -8);
+        return $this->settings['token'].'.'.substr(md5(strtolower($key)), -8);
     } // function key()
 
     /**
@@ -450,6 +455,10 @@ abstract class Cache {
                 // Sucessful saved
                 return $data;
             }
+        } else {
+            throw new CacheException(
+                'Cannot increment or decrement non-numeric or unset value'
+            );
         }
         return FALSE;
     }
@@ -461,4 +470,4 @@ abstract class Cache {
  *
  * @ingroup Cache
  */
-class CacheException extends Exception {}
+class CacheException extends \Exception {}

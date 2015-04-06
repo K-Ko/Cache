@@ -1,5 +1,10 @@
 <?php
 /**
+ *
+ */
+namespace KKo\Cache;
+
+/**
  * Mockup class with no persistent functionality, cache only for
  * actual script run
  *
@@ -8,12 +13,7 @@
  * @license    GNU General Public License http://www.gnu.org/licenses/gpl.txt
  * @version    1.0.0
  */
-namespace Cache;
-
-/**
- *
- */
-class Mock extends \Cache {
+class Mock extends Cache {
 
     // -------------------------------------------------------------------------
     // PUBLIC

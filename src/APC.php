@@ -1,5 +1,10 @@
 <?php
 /**
+ *
+ */
+namespace KKo\Cache;
+
+/**
  * Cache class using APC opcode cache
  *
  * For more information see http://www.php.net/manual/book.apc.php
@@ -9,12 +14,7 @@
  * @license    GNU General Public License http://www.gnu.org/licenses/gpl.txt
  * @version    1.0.0
  */
-namespace Cache;
-
-/**
- *
- */
-class APC extends \Cache {
+class APC extends Cache {
 
     // -------------------------------------------------------------------------
     // PUBLIC
@@ -133,7 +133,7 @@ class APC extends \Cache {
      * @return string
      */
     protected function key( $key ) {
-        return $this->settings['Token'].'.'.$key;
+        return $this->settings['token'].'.'.$key;
     } // function key()
 
 }

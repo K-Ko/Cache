@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class KKo\Cache\Files | KKo Cache</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-KKo.html">
+						KKo<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-KKo.Cache.html">
+						Cache					</a>
+
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-KKo.Cache.AbstractFile.html">AbstractFile</a></li>
+				<li><a href="class-KKo.Cache.APC.html">APC</a></li>
+				<li><a href="class-KKo.Cache.Cache.html">Cache</a></li>
+				<li><a href="class-KKo.Cache.File.html">File</a></li>
+				<li class="active"><a href="class-KKo.Cache.Files.html">Files</a></li>
+				<li><a href="class-KKo.Cache.MemCache.html">MemCache</a></li>
+				<li><a href="class-KKo.Cache.Mock.html">Mock</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-KKo.Cache.CacheException.html">CacheException</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-KKo.Cache.html" title="Summary of KKo\Cache"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="-API-documentation.zip" title="Download documentation as ZIP archive"><span>Download</span></a>
+			</li>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Files</h1>
+
+
+	<div class="description">
+	<p>Class Files</p>
+
+<p>Store data for each id in a separate file, recommended for large data sets
+The data are not in memory, they will read each time they are required.</p>
+
+<p>The following settings are supported:</p>
+
+<ul>
+<li>Token     : used to build unique cache files (optional)</li>
+<li>Directory : Where to store the file with the cached data (optional)</li>
+</ul>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-KKo.Cache.Cache.html"><span>KKo\Cache\Cache</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+			<a href="class-KKo.Cache.AbstractFile.html"><span>KKo\Cache\AbstractFile</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:60px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>KKo\Cache\Files</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-KKo.html">KKo</a>\<a href="namespace-KKo.Cache.html">Cache</a><br>
+		
+
+				<b>Copyright:</b>
+				2010-2013 Knut Kohl<br>
+				<b>License:</b>
+				<a href="GNU">General Public License http://www.gnu.org/licenses/gpl.txt</a><br>
+				<b>Author:</b>
+				Knut Kohl <a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#58;g&#x69;&#116;&#x68;&#x75;&#98;&#x40;&#107;n&#x75;&#116;&#x6b;&#x6f;&#104;&#x6c;&#46;&#100;&#x65;">g&#x69;&#116;&#x68;&#x75;&#98;&#x40;&#107;n&#x75;&#116;&#x6b;&#x6f;&#104;&#x6c;&#46;&#100;&#x65;</a><br>
+				<b>Version:</b>
+				1.0.0<br>
+			<b>Located at</b> <a href="source-class-KKo.Cache.Files.html#7-104" title="Go to source code">Files.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="write" id="_write">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_write">#</a>
+		<code><a href="source-class-KKo.Cache.Files.html#29-40" title="Go to source code">write</a>( <span>string <var>$key</var></span>, <span>string <var>$data</var></span>, <span>integer <var>$ttl</var></span> )</code>
+
+		<div class="description short">
+			<p>Write raw data in cache</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Write raw data in cache</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>Unique cache Id</dd>
+					<dt><var>$data</var></dt>
+					<dd></dd>
+					<dt><var>$ttl</var></dt>
+					<dd>Time to live</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fetch" id="_fetch">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fetch">#</a>
+		<code><a href="source-class-KKo.Cache.Files.html#42-57" title="Go to source code">fetch</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>Retrieve raw data from cache</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Retrieve raw data from cache</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>Unique cache Id</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete" id="_delete">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete">#</a>
+		<code><a href="source-class-KKo.Cache.Files.html#59-68" title="Go to source code">delete</a>( <span>string <var>$key</var></span> )</code>
+
+		<div class="description short">
+			<p>Delete data from cache</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Delete data from cache</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>Unique cache Id</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="flush" id="_flush">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_flush">#</a>
+		<code><a href="source-class-KKo.Cache.Files.html#70-83" title="Go to source code">flush</a>( )</code>
+
+		<div class="description short">
+			<p>Clear cache</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Clear cache</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-KKo.Cache.AbstractFile.html#_flush">KKo\Cache\AbstractFile::flush()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="info" id="_info">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_info">#</a>
+		<code><a href="source-class-KKo.Cache.Files.html#85-92" title="Go to source code">info</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					array
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-KKo.Cache.AbstractFile.html#_info">KKo\Cache\AbstractFile::info()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHits" id="_getHits">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHits">#</a>
+		<code><a href="source-class-KKo.Cache.Files.html#94-96" title="Go to source code">getHits</a>( )</code>
+
+		<div class="description short">
+			<p>Amount of cache hits absolute, overwrite for concrete class!</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Amount of cache hits absolute, overwrite for concrete class!</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-KKo.Cache.Cache.html#_getHits">KKo\Cache\Cache::getHits()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMisses" id="_getMisses">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMisses">#</a>
+		<code><a href="source-class-KKo.Cache.Files.html#98-100" title="Go to source code">getMisses</a>( )</code>
+
+		<div class="description short">
+			<p>Amount of cache misses absolute, overwrite for concrete class!</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Amount of cache misses absolute, overwrite for concrete class!</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-KKo.Cache.Cache.html#_getMisses">KKo\Cache\Cache::getMisses()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-KKo.Cache.AbstractFile.html#methods">KKo\Cache\AbstractFile</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-KKo.Cache.AbstractFile.html#_FileName">FileName()</a>, 
+			<a href="class-KKo.Cache.AbstractFile.html#_ReadFile">ReadFile()</a>, 
+			<a href="class-KKo.Cache.AbstractFile.html#_RemoveFile">RemoveFile()</a>, 
+			<a href="class-KKo.Cache.AbstractFile.html#_WriteFile">WriteFile()</a>, 
+			<a href="class-KKo.Cache.AbstractFile.html#___construct">__construct()</a>, 
+			<a href="class-KKo.Cache.AbstractFile.html#_isAvailable">isAvailable()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-KKo.Cache.Cache.html#methods">KKo\Cache\Cache</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-KKo.Cache.Cache.html#___get">__get()</a>, 
+			<a href="class-KKo.Cache.Cache.html#___isset">__isset()</a>, 
+			<a href="class-KKo.Cache.Cache.html#___set">__set()</a>, 
+			<a href="class-KKo.Cache.Cache.html#___unset">__unset()</a>, 
+			<a href="class-KKo.Cache.Cache.html#_dec">dec()</a>, 
+			<a href="class-KKo.Cache.Cache.html#_factory">factory()</a>, 
+			<a href="class-KKo.Cache.Cache.html#_get">get()</a>, 
+			<a href="class-KKo.Cache.Cache.html#_inc">inc()</a>, 
+			<a href="class-KKo.Cache.Cache.html#_key">key()</a>, 
+			<a href="class-KKo.Cache.Cache.html#_modify">modify()</a>, 
+			<a href="class-KKo.Cache.Cache.html#_save">save()</a>, 
+			<a href="class-KKo.Cache.Cache.html#_serialize">serialize()</a>, 
+			<a href="class-KKo.Cache.Cache.html#_set">set()</a>, 
+			<a href="class-KKo.Cache.Cache.html#_unserialize">unserialize()</a>, 
+			<a href="class-KKo.Cache.Cache.html#_valid">valid()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="hits" id="$hits">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-KKo.Cache.Files.html#102" title="Go to source code"><var>$hits</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$hits" class="anchor">#</a>
+				<code><span class="php-num">0</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="misses" id="$misses">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-KKo.Cache.Files.html#103" title="Go to source code"><var>$misses</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$misses" class="anchor">#</a>
+				<code><span class="php-num">0</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-KKo.Cache.AbstractFile.html#properties">KKo\Cache\AbstractFile</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-KKo.Cache.AbstractFile.html#$cachedir"><var>$cachedir</var></a>, 
+			<a href="class-KKo.Cache.AbstractFile.html#$data"><var>$data</var></a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-KKo.Cache.Cache.html#properties">KKo\Cache\Cache</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-KKo.Cache.Cache.html#$Caches"><var>$Caches</var></a>, 
+			<a href="class-KKo.Cache.Cache.html#$settings"><var>$settings</var></a>, 
+			<a href="class-KKo.Cache.Cache.html#$stack"><var>$stack</var></a>, 
+			<a href="class-KKo.Cache.Cache.html#$ts"><var>$ts</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		KKo Cache API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

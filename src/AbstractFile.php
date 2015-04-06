@@ -1,24 +1,24 @@
 <?php
 /**
+ *
+ */
+namespace KKo\Cache;
+
+/**
  * Class Cache_File
  *
  * Store all data into file
  * All data will be held in memeory during the script runs
  *
  * The following settings are supported:
- * - Directory : Where to store the file with the cached data (optional)
+ * - directory : Where to store the file with the cached data (optional)
  *
  * @author     Knut Kohl <github@knutkohl.de>
  * @copyright  2010-2013 Knut Kohl
  * @license    GNU General Public License http://www.gnu.org/licenses/gpl.txt
  * @version    1.0.0
  */
-namespace Cache;
-
-/**
- *
- */
-abstract class AbstractFile extends \Cache {
+abstract class AbstractFile extends Cache {
 
     // -------------------------------------------------------------------------
     // PUBLIC
@@ -33,7 +33,7 @@ abstract class AbstractFile extends \Cache {
     public function __construct( $settings=array() ) {
         parent::__construct($settings);
 
-        $this->cachedir = $this->settings['Directory'];
+        $this->cachedir = $this->settings['directory'];
 
         // Auto detect cache directory
         // 1st use system temp. directory

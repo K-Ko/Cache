@@ -1,23 +1,24 @@
 <?php
 /**
+ *
+ */
+namespace KKo\Cache;
+
+/**
  * Class File
  *
  * Store all data into one file
  * All data will be held in memeory during the script runs
  *
  * The following settings are supported:
- * - Token     : used to build unique cache file (optional)
- * - Directory : Where to store the file with the cached data (optional)
+ *
+ * - token     : used to build unique cache file (optional)
+ * - directory : Where to store the file with the cached data (optional)
  *
  * @author     Knut Kohl <github@knutkohl.de>
  * @copyright  2010-2013 Knut Kohl
  * @license    GNU General Public License http://www.gnu.org/licenses/gpl.txt
  * @version    1.0.0
- */
-namespace Cache;
-
-/**
- *
  */
 class File extends AbstractFile {
 
