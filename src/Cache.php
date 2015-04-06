@@ -259,7 +259,7 @@ abstract class Cache {
      * @return bool
      */
     public function set( $key, $data, $ttl=NULL ) {
-        if (!isset($ttl)) $ttl = $this->settings['TTL'];
+        if (!isset($ttl)) $ttl = $this->settings['ttl'];
 
         if (!is_array($key)) {
             return $this->write($key, array($this->ts, $ttl, $data), $ttl);
@@ -363,7 +363,7 @@ abstract class Cache {
     protected $settings = array(
         'token'       => '',
         'directory'   => '',
-        'TTL'         => 3600
+        'ttl'         => 3600
     );
 
     /**

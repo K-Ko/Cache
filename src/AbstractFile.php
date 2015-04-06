@@ -11,6 +11,7 @@ namespace KKo\Cache;
  * All data will be held in memeory during the script runs
  *
  * The following settings are supported:
+ *
  * - directory : Where to store the file with the cached data (optional)
  *
  * @author     Knut Kohl <github@knutkohl.de>
